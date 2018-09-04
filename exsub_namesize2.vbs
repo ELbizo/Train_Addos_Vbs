@@ -8,6 +8,9 @@
 
 Option Explicit
 
+Dim Objshell
+Set Objshell=CreateObject("wscript.shell")
+
 Dim yname
 Dim choice
 
@@ -15,10 +18,10 @@ choice=MsgBox("Vamos verificar o seu nome?", VbYesNo+VbQuestion)
 if choice=VbYes Then
 yname=Trim(InputBox("Digite-o p. favor: "))
 Call Maisc_Size(yname)
-
 Elseif choice=VbNo Then
-MsgBox "Ok. Grato pela utilizacao.", VbInformation
+MsgBox "Ok. Grato pela utilizacao."
 End if
+wscript.quit
 
 'SUB_Procedure [vs2]=====================
 
@@ -54,7 +57,14 @@ obj.sendkeys "%asn"
 wscript.sleep 2500
 
 MsgBox "Muito bem, " & recebe & "! " & "O tamanho do seu nome eh de: " & grando & " caracteres; " & VbCrlf & "o que corresponde a: " & bytes & " bytes de 'tamanho' =]"
+wscript.sleep 1400
+MsgBox "Grato pelo uso e consideracao."
 
-MsgBox "procedure of: 'string.len' @honorama_code", VbInformation
+REM wscript.sleep 1400
+REM MsgBox "Vamos verificar tb o seu Niver(...)"
+REM wscript.sleep 1400
+REM Objshell.run "U:\Programming2\Vbscript_GitSent\exsub_niver-age.exe"
+
 End Sub
+
 
