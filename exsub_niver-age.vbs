@@ -10,19 +10,26 @@ Dim resp
 Dim name
 Dim birth
 
+Dim objShell, nunaPath
+Set objShell = CreateObject("WScript.Shell")
+nunaPath=objShell.CurrentDirectory &"\"
+
 'Body=========================================
 
-resp=MsgBox ("Hi there! Vc pode nos fornecer o seu nome?", VbYesNo+VbQuestion)
 
-if resp= VbYes Then
-name=InputBox ("Type it here: ")
-MsgBox "Hello " + name + ". Very good!",VbInformation
+REM resp=MsgBox ("Vc pode nos fornecer o seu nome?", VbYesNo+VbQuestion)
 
-birth=InputBox("Agora, digite seu ano_de_nascimento, please.", " ", "Numeric Value")
+REM if resp= VbYes Then
+REM name=InputBox ("Type it here: ")
+REM MsgBox "Hello " + name + ". Very good!",VbInformation
+
+resp=MsgBox("Vamos verificar a sua idade?", VbYesNo)
+If resp=VbYes then
+birth=InputBox("Digite seu ano_de_nascimento: ", " ", "Numeric Value")
 Call NiverAge(birth)
 
-elseif resp=VbNo Then
-MsgBox "Cannot continue the program, Sorry.",VbOkOnly+vbCritical
+Elseif resp=VbNo Then
+MsgBox "Sad. We cannot continue the program.",VbOkOnly+vbCritical
 end if
 
 'SUB=========================================
@@ -35,5 +42,9 @@ MsgBox "Parabens! Vemos q hj vc esta com : " & age & " anos_de_idade."
 MsgBox "Thanks 4your Attention. =]"
 End Sub
 
+'End of Procedure ----
+
+Wscript.sleep 1500
+objShell.run nunaPath &"exsub_salut_day.vbs"
 
 
