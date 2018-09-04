@@ -9,7 +9,7 @@ Option Explicit
 Dim user
 
 Do
-MsgBox "Hi. Digite seu nome, por favor: "
+MsgBox "Anyway... Qual seu nome, por favor: "
 user=InputBox("Type it here.","Usuario_")
 if Not IsNumeric(user) Then
 Call Usuario(user)
@@ -23,7 +23,7 @@ Loop
 '--> Making the subrotine1-----
 
 Sub Usuario(string)
-MsgBox "Hello, Sr(a). " & string& "!",VbInformation
+MsgBox "Entao, Sr(a). " & string& "..",VbInformation
 End Sub
 
 '--> Making the subrotine2-----
