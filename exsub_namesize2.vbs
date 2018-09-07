@@ -60,11 +60,6 @@ MsgBox "Muito bem, " & recebe & "! " & "O tamanho do seu nome eh de: " & grando 
 wscript.sleep 1400
 MsgBox "Grato pelo uso e consideracao."
 
-REM wscript.sleep 1400
-REM MsgBox "Vamos verificar tb o seu Niver(...)"
-REM wscript.sleep 1400
-REM Objshell.run "U:\Programming2\Vbscript_GitSent\exsub_niver-age.exe"
-
 End Sub
 
 
